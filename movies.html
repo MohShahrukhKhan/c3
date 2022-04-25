@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
+    <style>
+        #navbar{
+        display: flex;
+        justify-content: space-between;
+        
+      }
+      #movies{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        
+      }
+      #movies div{
+          border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
@@ -14,7 +31,7 @@
     </div>
     <div id="search_bar">
       <!-- input box for searching movies with id as "search" -->
-      <input type="text" oninput="debounce(500)" id="search" placeholder="Search Movies">
+      <input type="text" oninput="myfun()" id="search" placeholder="Search Movies">
       <!-- No button should be there for searching movies, it should search with input  -->
     </div>
 
